@@ -1,0 +1,611 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	font: 12px/18px Arial, sans-serif;
+	width: 100%;
+	background: #003366;
+}
+
+::-moz-selection { /* Code for Firefox */
+    background: transparent;
+}
+
+::selection {
+    background: transparent;
+}
+.wrapper {
+	width: 1190px;
+	margin: 0 auto;	
+}
+/* Header -----------------------------------------------------------------------------*/
+.header {	height: 100px; position:relative; }
+.logo{
+	width: 100px;
+	height: 100px;
+	background : url('images/logo.png')  ;
+	background-size:contain;
+	float: left;	
+}
+
+.logo:hover {
+	-webkit-animation:anim2 2s;
+	-moz-animation:anim2 2s;
+	-o-animation:anim2 2s;
+	animation:anim2 2s;
+}
+
+.fizteh{
+	color: #fff;
+	font-size: 30pt;
+	float: left;
+	margin: 45px 0px 0px 30px;
+}
+/*--------------- animation -------*/
+
+@-webkit-keyframes anim2 {
+ 0,100% {	-webkit-transform:rotate(0deg); }
+	50% {	-webkit-transform:rotate(360deg);}
+}
+
+@-webkit-keyframes anim {
+	0,100% { background-position:0px 0px;	}
+	50% { background-position:-10px 0px;}
+}
+/*------------------------slider -----------------*/
+.slider-box{
+	z-index: 9;
+	width: 900px;
+	height: 425px;
+	overflow: hidden;
+	position: relative;
+}
+.slider{
+	position:relative;
+	width:10000px;
+	height:440px;
+}
+.slider img{ float:left;}
+.slider-box .prev, .slider-box .next{
+	position:absolute;
+	top:210px;
+	display:block;
+	width:29px;
+	height:29px;
+	cursor:pointer;
+}
+.slider-box .prev{
+	left:10px;
+	background:url('images/left.png');
+	background-size:contain;
+}
+.slider-box .next{
+	right:10px;
+	background:url('images/right.png');
+	background-size:contain;
+}
+.bullets{
+	position:absolute;
+	bottom:10px;
+	left:10px;
+	height:11px;
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+.bullets li{
+	width:11px;
+	height:11px;
+	margin:0 3px 0 0;
+	padding:0;
+	float:left; 
+	background:white;
+	cursor:pointer;
+}
+.bullets li.active{ background:#003366;}
+/* Middle -----------------------------------------------------------------------------*/
+.content {}
+.contentright{
+	width: 900px;
+	height: 730px;
+	float: left;
+	position:relative;	
+}
+
+.abiturient{
+	width: 376px;
+	height: 138px;
+	background:url('images/abiturient.png');
+	margin-top: 5px;
+	float: left;
+	overflow:hidden;	
+	cursor:pointer;
+}
+.student{
+	width: 376px;
+	height: 138px;
+	background:#9865af url('images/student.png');
+	margin-top: 5px;
+	margin-left: 5px;
+	float: left;
+	cursor:pointer;
+}
+.youtube{
+	width: 138px;
+	height: 138px;
+	background: url('images/youtube.png');
+	margin-top: 5px;
+	margin-left: 5px;
+	float: left;
+	cursor:pointer;
+}
+.teacher{
+	width: 376px;
+	height: 138px;
+	background:#f57f73 url('images/teacher.png');
+	margin-top: 5px;
+ 	float: left;
+	cursor:pointer;
+}
+.obch:hover .zag1 {color: rgba(255, 255, 255, 0.5);}
+
+.right{
+	background:url('images/right.png');
+	background-size:contain;
+	margin-top:20px;
+	margin-right:20px;
+	float:right;
+	width:30px;
+	height:30px;
+	transition:-webkit-transform 1s;
+	cursor:pointer;
+}
+
+.right:hover {
+	transition:1s;
+	-webkit-transform:rotate(90deg);
+}
+
+.zaochniki{
+	width: 376px;
+	height: 138px;
+	background: url('images/zaochnik.png');
+	margin-top: 5px;
+	margin-left: 5px;
+	float: left;
+	cursor:pointer;
+}
+
+.module{
+	width: 138px;
+	height: 138px;
+	background: url('images/module.png');
+	margin-top: 5px;
+	margin-left: 5px;
+	float: left;
+	cursor:pointer;
+}
+
+.schedule:hover, .studlife:hover, .vk:hover,.fb:hover, 
+.student:hover , .youtube:hover ,
+.teacher:hover , .zaochniki:hover , .module:hover ,
+.abiturient:hover {	-webkit-animation:anim 1s; }
+
+.contentleft{
+	width: 281px;
+	height: 730px;
+	margin-left: 5px;
+	float: left;
+	position:relative;
+}
+
+.schedule{
+	width: 281px;
+	height: 138px;
+	background: url('images/shedule.png');
+	cursor:pointer;
+}
+
+.studlife{
+	width: 281px;
+	height: 138px;
+	background: url('images/studlife.png');
+	margin-top: 5px;
+	cursor:pointer;
+}
+
+.vk{
+	width: 138px;
+	height: 138px;
+	background: url('images/vk.png');
+	margin-top: 5px;
+	float: left;
+	cursor:pointer;
+}
+
+.fb{
+	 width: 138px;
+	height: 138px;
+	background: url('images/fb.png');
+	margin-top: 5px;
+	margin-left: 5px;
+	float: left;
+	cursor:pointer;
+}
+#news-sm,
+#news-lg{
+	position:relative;
+}
+
+ .fixed-sm,
+ .fixed-lg {
+	float:left;
+	overflow:hidden;
+	width:281px;
+	height:281px;
+	background:green;
+	margin-top:5px;
+ }
+ 
+ .fixed-md {
+	float:left;
+	overflow:hidden;
+	width:470px;
+	height:281px;
+	background:green;
+	margin-top:5px;
+ }
+ 
+ .fixed-md,
+ .fixed-sm{	display:none; }
+.zag1{
+	color:#fff;
+	font-size: 24px;
+	text-align:right;
+	position:relative;
+	top:100px;
+	width:100%;
+	padding-right:25px;
+	left:30px;
+	cursor:pointer;
+}
+
+.social-block-md {display:none;}
+
+/* Footer -----------------------------------------------------------------------------*/
+.footer {
+	 width:100%;
+	 height:50px; 
+	 float:left;
+	 margin-top:10px;
+}
+.sowl{
+	width:40px;
+	height:50px;
+	background : url('images/logo_2.png')  ;
+	background-size:contain;
+	float:right;
+	margin-top:5px;	
+}
+/*-------------------------- media blocks --------------------------------------------------*/
+@media  (min-width:801px) and (max-width:1024px) {
+	.header {height:100px;}
+	.wrapper {		width: 900px;	margin: 0 auto;	}
+	.wrap-1 {		width:100%;		position:relative;}
+	.fixed-lg{	display:none; }
+	.fixed-md { 
+		display:block;
+		margin-top:5px;		
+		margin-left:5px; 		
+		}
+	
+	.contentright{		
+		width: 100%;		
+		height: 706px;		
+		float:left;		
+	}
+	
+	.contentleft{
+		width: 100%;
+		height: 285px;
+		margin-top: 5px;
+		margin-left:0px;
+		float:left;
+	}	
+	
+	.fizteh{	font-size: 24pt;	}	
+	.slider-box{	float:left;	} 	
+	.abiturient,	.student, .zaochniki,
+	.teacher{	width: 376px;	height: 138px; float:left; }	
+	.schedule, .studlife{	
+		width: 281px;	
+		height: 138px; 
+		float:left;
+		margin:5px 0 0 0;
+	}	
+	.wrap-1 {		width:281px;	float:left; }	
+	.social-block-lg {		display:none;	}
+	.social-block-md {
+		display:block;
+		width:138px;
+		height:281px;
+		float:right;
+	}
+	.vk {	margin:5px 0 0 0px;	}
+	.fb{
+		width: 138px;
+		height: 138px;
+		background: url('images/fb.png');
+		margin-top: 5px;
+		margin-left: 0px;
+		float: left;
+	} 
+	.zag1{	font-size: 18pt;}
+}
+
+@media (min-width:641px) and (max-width:800px) {
+	.header {height:100px; }
+	.wrapper {		width: 710px;		margin: 0 auto;	}
+	.wrap-1 {		width:424px;		float:left;	}
+	.fixed-lg{		margin-top:0px;		margin-left:5px; }	
+	.contentright{		width: 100%;		height: 281px;		float: left;	}
+	
+	.contentleft{
+		width: 100%;
+		height: 281px;
+		margin-top: 10px;
+		margin-left:0px;
+		float: left;
+	}	
+	
+	.fizteh{	font-size: 24pt;	}	
+	.slider-box{	display:none;	}
+	
+	.abiturient,	.student, .zaochniki,
+	.schedule, .studlife,
+	.teacher{	width: 281px;	height: 138px; float:left;}	
+	.vk{	display:none;}
+	.vkmd{
+		width: 138px;
+		height: 138px;
+		background: url('images/vk.png');
+		margin-left: 5px;
+		float: left;
+		cursor:pointer;
+	}
+	
+	.vkmd:hover { -webkit-animation:anim 1s; }
+	
+	.fb{
+		 width: 138px;
+		height: 138px;
+		background: url('images/fb.png');
+		margin-top: 5px;
+		margin-left: 5px;
+		float: left;
+	} 
+	.zag1{	font-size: 14pt;}	
+ }
+ 
+ @media (max-width:641px){
+ 
+	.wrapper {		width: 567px;		margin: 0 auto;	}
+	.header {	height: 50px;}
+	.logo{
+		width: 50px;
+		height: 50px;
+		background : url('images/logo.png')  ;
+		background-size:contain;
+		float: left;
+	}
+
+	.fizteh{
+		color: #fff;
+		font-size: 22pt;
+		float: left;
+		margin: 20px 0px 0px 15px;
+	}
+	
+	.contentright{
+		width: 100%;
+		height: 281px;
+		position:relative;		
+	}
+	
+	.contentleft{
+		width: 100%;
+		height: 420px;
+		margin-top: 10px;
+		margin-left:0px;
+		position:relative;
+	}
+	.slider-box{	display:none;	}
+	
+	.abiturient{	
+		width: 281px;
+		height: 138px;	
+		margin-top: 5px;
+		float: left;
+	}
+
+	.student{
+		width: 281px;
+		height: 138px;	
+		margin-top: 5px;
+		margin-left: 5px;
+		float: left;
+	}
+ 
+	.teacher{
+		width: 281px;
+		height: 138px;		
+		margin-top: 5px;
+		float: left;
+	}
+ 
+	.zaochniki{
+		width: 281px;
+		height: 138px;
+		margin-top: 5px;
+		margin-left: 5px;
+		float: left;
+	}
+	.youtube{ display:none; }
+	.module{ display:none;	}
+	.youtubesm{
+		width: 138px;
+		height: 138px;
+		background: url('images/youtube.png');
+		margin-top: 5px;
+		margin-left: 5px;
+		float: left;
+		cursor:pointer;
+	}
+
+	.modulesm{
+		width: 138px;
+		height: 138px;
+		background: url('images/module.png');
+		margin-top: 5px;
+		margin-left: 5px;
+		float: left;
+		cursor:pointer;
+	}
+ 
+	.modulesm:hover,
+  	.youtubesm:hover {		-webkit-animation:anim 1s; 	}
+	
+	.fixed-lg {display:none;}
+	.fixed-sm {display:block; margin:0px 0px 0px 5px;}
+	.left { float:left; overflow:hidden;}
+
+	.zag1{	font-size: 14pt;}	
+ }
+ 
+ 
+ @media (max-width:480px){
+ 
+	.wrapper {		width: 281px;		margin: 0 auto;	}
+	.wrap-1 {		width:281px;		float:left; 	}
+	.header {	height: 150px; }
+	.logo{
+		width: 100px;
+		height: 100px;
+		background : url('images/logo.png')  ;
+		background-size:contain;
+		position:relative;
+		margin:0px 0px 0px 90px;
+	}
+
+	.fizteh{
+		color: #fff;
+		font-size: 20pt;
+		position:relative;
+		width:281px;
+		text-align:center;
+		margin: 10px 0px 0px 0px;
+	}
+	
+	.contentright{
+		width: 100%;
+		height: 571px;
+		position:relative;
+	}
+	
+	.contentleft{
+		width: 100%;
+		height: 570px;
+		margin-top: 5px;
+		margin-left:0px;		
+		position:relative;
+	}
+	.slider-box{	display:none;	}
+	
+	.abiturient, .teacher,.zaochniki,
+	.student{
+		width: 281px;
+		height: 138px;	
+		margin-top: 5px;
+		margin-left: 0px;
+		float: left;
+	}
+ 
+	
+	
+	.youtube{ display:none; }
+	.module{ display:none;	}
+	.youtubesm{
+		width: 138px;
+		height: 138px;
+		background: url('images/youtube.png');
+		margin-top: 5px;
+		margin-left: 0px;
+		float: left;
+		cursor:pointer;
+	}
+
+	.modulesm{
+		width: 138px;
+		height: 138px;
+		background: url('images/module.png');
+		margin-top: 5px;
+		margin-left: 5px;
+		float: left;
+		cursor:pointer;
+	}
+ 
+	.modulesm:hover,
+  	.youtubesm:hover {		-webkit-animation:anim 1s; 	}
+	
+	.fixed-lg {display:none;}
+	.fixed-sm {display:none; margin:0px 0px 0px 5px;}
+	.left { float:left; overflow:hidden;}
+
+	.zag1{	font-size: 14pt;}	
+ }
